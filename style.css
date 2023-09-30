@@ -1,0 +1,144 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --bgr-gradient: linear-gradient(
+    to bottom,
+    hsl(238, 29%, 16%),
+    hsl(14, 88%, 65%)
+  );
+  --accent: hsl(238, 29%, 16%);
+  --clr-text: hsl(14, 88%, 65%);
+  --ff: "Kumbh Sans";
+  --fw-h: 700;
+  --clr-divider: hsl(240, 5%, 91%);
+}
+body {
+  background: var(--bgr-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: var(--ff);
+}
+
+.main {
+  max-width: 25em;
+  min-width: 25em;
+  background-color: white;
+  padding: 2em;
+  border-radius: 1em;
+  max-height: 40em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.divider {
+  background-color: var(--clr-divider);
+}
+
+.hidden {
+  display: none;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-5em);
+}
+.flex-group {
+  display: flex;
+  flex-direction: row;
+}
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 1em;
+}
+.dropdown button {
+  border-style: none;
+  background-color: white;
+  cursor: pointer;
+}
+.rotate-arrow {
+  rotate: 180deg;
+}
+.image {
+  transform: translateY(-10.5em);
+  filter: drop-shadow(0 30px rgba(0, 0, 0, 0.1));
+}
+.questions {
+  transform: translateY(-5em);
+}
+h2 {
+  font-size: 1em;
+  color: hsl(238, 29%, 26%);
+}
+.color {
+  color: hsl(238, 29%, 6%);
+  font-size: 1.05em;
+}
+p {
+  font-size: 0.8em;
+}
